@@ -31,7 +31,8 @@ setup(
         "torchvision",
         "diffusers==0.11.1",
         "opencv-python",
-        "transformers==4.34.0"
+        "transformers==4.34.0",
+        "octo @ git+https://github.com/octo-models/octo@8559a7077b266195c5611c7748a28aae2278def5",
     ],
     eager_resources=['*'],
     include_package_data=True,

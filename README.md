@@ -10,8 +10,7 @@ Create a python3 conda environment (tested with Python 3.10) and run the followi
 
 1. Create python 3.10 conda environment: `conda create --name droid_policy_learning_env python=3.10`
 2. Activate the conda environment: `conda activate droid_policy_learning_env`
-3. Install [octo](https://github.com/octo-models/octo) (used for data loading)
-4. Run `pip install -e .` in `droid_policy_learning`.
+3. Run `pip install -e .` in `droid_policy_learning`.
 
 With this you are all set up for training policies on DROID. If you want to evaluate your policies on a real robot DROID setup, 
 please install the DROID robot controller in the same conda environment (follow the instructions [here](https://github.com/droid-dataset/droid)).
