@@ -2,7 +2,7 @@
 
 This repository contains code for training and evaluating policies on the DROID(TODO(Karl/Sasha): add link to DROID website) dataset. DROID is a large-scale, in-the-wild robot manipulation dataset. This codebase is built as a fork of [`robomimic`](https://robomimic.github.io/), a popular repository for imitation learning algorithm development. For more information about DROID, please see the following links: 
 
-[**[Homepage]**](XXX) &ensp; [**[Documentation]**](XXX) &ensp; [**[Paper]**](XXX) &ensp; [**[Dataset Visualizer]**](XXX).
+[**[Homepage]**](https://droid-dataset.github.io) &ensp; [**[Documentation]**](https://droid-dataset.github.io/droid) &ensp; [**[Paper]**](https://droid-dataset.github.io/paper) &ensp; [**[Dataset Visualizer]**](https://droid-dataset.github.io/dataset.html).
 
 -------
 ## Installation
@@ -14,25 +14,27 @@ Create a python3 conda environment (tested with Python 3.10) and run the followi
 4. Run `pip install -e .` in `droid_policy_learning`.
 
 With this you are all set up for training policies on DROID. If you want to evaluate your policies on a real robot DROID setup, 
-please install the DROID robot controller in the same conda environment (follow the instructions [here](https://github.com/AlexanderKhazatsky/DROID)).
+please install the DROID robot controller in the same conda environment (follow the instructions [here](https://github.com/droid-dataset/droid)).
 
 -------
 ## Preparing Datasets
 We provide all DROID datasets in RLDS format, which makes it easy to co-train with various other robot-learning datasets (such as those in the [Open X-Embodiment](https://robotics-transformer-x.github.io/)).
 
-To download the DROID dataset from the Google cloud bucket, install the [gsutil package](https://cloud.google.com/storage/docs/gsutil_install) and run the following command (Note: the full dataset is XXX TB in size):
+To download the DROID dataset from the Google cloud bucket, install the [gsutil package](https://cloud.google.com/storage/docs/gsutil_install) and run the following command (Note: the full dataset is 1.7TB in size):
 ```
-gsutil -m cp -r XXX <path_to_your_target_dir>
+gsutil -m cp -r gs://gresearch/robotics/droid <path_to_your_target_dir>
 ```
 
 We also provide a small (2GB) example dataset with 100 DROID trajectories that uses the same format as the full RLDS dataset and can be used for code prototyping and debugging:
 ```
-gsutil -m cp -r XXX <path_to_your_target_dir>
+gsutil -m cp -r gs://gresearch/robotics/droid_100 <path_to_your_target_dir>
 ```
 
 For good performance of DROID policies in your target setting, it is helpful to include a small number of demonstrations in your target domain into the training mix ("co-training"). 
-Please follow the instructions [here](XXX) for collecting a small teleoperated dataset in your target domain and converting it to the RLDS training format.
+Please follow the instructions [here](https://droid-dataset.github.io/droid/example-workflows/data-collection.html) for collecting a small teleoperated dataset in your target domain and converting it to the RLDS training format.
 Make sure that all datasets you want to train on are under the same root directory `DATA_PATH`.
+
+*Note*: We also provide the raw DROID dataset at stereo, full HD resolution. If your training pipeline requires this information, you can download the dataset from `gs://gresearch/robotics/droid_raw`. For a detailed description of the raw data format, please see our [developer documentation](https://droid-dataset.github.io/droid).
 
 -------
 ## Training
@@ -71,7 +73,7 @@ We also provide a stand-alone example to load data from DROID [here](examples/dr
 -------
 
 ## Evaluating Trained Policies
-To evaluate policies, make sure that you additionally install [DROID](https://github.com/AlexanderKhazatsky/DROID) in your conda environment and then run:
+To evaluate policies, make sure that you additionally install [DROID](https://github.com/droid-dataset/droid) in your conda environment and then run:
 ```python
 python scripts/evaluation/evaluate_policy.py
 ```
