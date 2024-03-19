@@ -30,7 +30,7 @@ gsutil -m cp -r gs://gresearch/robotics/droid_100 <path_to_your_target_dir>
 ```
 
 For good performance of DROID policies in your target setting, it is helpful to include a small number of demonstrations in your target domain into the training mix ("co-training"). 
-Please follow the instructions [here](https://droid-dataset.github.io/droid/example-workflows/data-collection.html) for collecting a small teleoperated dataset in your target domain and converting it to the RLDS training format.
+Please follow the instructions [here](https://droid-dataset.github.io/droid/example-workflows/data-collection.html) for collecting a small teleoperated dataset in your target domain and instructions [here](https://github.com/kpertsch/droid_dataset_builder) converting it to the RLDS training format.
 Make sure that all datasets you want to train on are under the same root directory `DATA_PATH`.
 
 *Note*: We also provide the raw DROID dataset at stereo, full HD resolution. If your training pipeline requires this information, you can download the dataset from `gs://gresearch/robotics/droid_raw`. For a detailed description of the raw data format, please see our [developer documentation](https://droid-dataset.github.io/droid).
