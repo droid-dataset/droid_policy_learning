@@ -10,7 +10,8 @@ Create a python3 conda environment (tested with Python 3.10) and run the followi
 
 1. Create python 3.10 conda environment: `conda create --name droid_policy_learning_env python=3.10`
 2. Activate the conda environment: `conda activate droid_policy_learning_env`
-3. Run `pip install -e .` in `droid_policy_learning`.
+3. Install [octo](https://github.com/octo-models/octo/tree/main) (used for data loading)
+4. Run `pip install -e .` in `droid_policy_learning`.
 
 With this you are all set up for training policies on DROID. If you want to evaluate your policies on a real robot DROID setup, 
 please install the DROID robot controller in the same conda environment (follow the instructions [here](https://github.com/droid-dataset/droid)).
@@ -62,7 +63,7 @@ We also provide a stand-alone example to load data from DROID [here](examples/dr
 |---------------------------|---------------------------------------------------------|-------------------------------------------------------------------------------|
 | Hyperparameters           | [droid_runs_language_conditioned_rlds.py](robomimic/scripts/config_gen/droid_runs_language_conditioned_rlds.py)     | Generates a config based on defined hyperparameters  |
 | Training Loop             | [train.py](robomimic/scripts/train.py)                  | Main training script.                                                         |
-| Datasets                  | [dataset.py](octo/data/dataset.py)                      | Functions for creating datasets and computing dataset statistics,             |
+| Datasets                  | [dataset.py](https://github.com/octo-models/octo/blob/main/octo/data/dataset.py)                      | Functions for creating datasets and computing dataset statistics,             |
 | RLDS Data Processing      | [rlds_utils.py](robomimic/utils/rlds_utils.py)    | Processing to convert RLDS dataset into dataset compatible for DROID training                      |
 | General Algorithm Class   | [algo.py](robomimic/algo/algo.py)             | Defines a high level template for all algorithms (eg. diffusion policy) to extend           |
 | Diffusion Policy          | [diffusion_policy.py](robomimic/algo/diffusion_policy.py)    | Implementation of diffusion policy |
