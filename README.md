@@ -2,7 +2,7 @@
 
 This repository contains code for training and evaluating policies on the DROID(TODO(Karl/Sasha): add link to DROID website) dataset. DROID is a large-scale, in-the-wild robot manipulation dataset. This codebase is built as a fork of [`robomimic`](https://robomimic.github.io/), a popular repository for imitation learning algorithm development. For more information about DROID, please see the following links: 
 
-[**[Homepage]**](https://droid-dataset.github.io) &ensp; [**[Documentation]**](https://droid-dataset.github.io/droid) &ensp; [**[Paper]**](https://droid-dataset.github.io/paper) &ensp; [**[Dataset Visualizer]**](https://droid-dataset.github.io/dataset.html).
+[**[Homepage]**](https://droid-dataset.github.io) &ensp; [**[Documentation]**](https://droid-dataset.github.io/droid) &ensp; [**[Paper]**](https://arxiv.org/abs/2403.12945) &ensp; [**[Dataset Visualizer]**](https://droid-dataset.github.io/dataset.html).
 
 -------
 ## Installation
