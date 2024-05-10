@@ -1,4 +1,4 @@
-"""
+rot_6d_to_euler_angles"""
 This file contains some PyTorch utilities.
 """
 import numpy as np
@@ -214,12 +214,14 @@ def rot_6d_to_axis_angle(rot_6d):
     return rot
 
 
-def rot_6d_to_euler_angles(rot_6d, convention="XYZ"):
+def rot_6d_to_euler_angles(rot_6d):
     """
     Converts tensor with rot_6d representation to euler representation.
     """
     rot_mat = rotation_6d_to_matrix(rot_6d)
-    rot = matrix_to_euler_angles(rot_mat, convention=convention)
+    rot = scipy.spatial.transform.Rotation.from_matrix(rot_mat.numpy())
+    rot = rot.as_euler("xyz")
+    rot = torch.Tensor(rot)
     return rot
 
 
