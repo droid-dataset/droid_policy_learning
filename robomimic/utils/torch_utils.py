@@ -2,6 +2,7 @@
 This file contains some PyTorch utilities.
 """
 import numpy as np
+import scipy
 import torch
 import torch.optim as optim
 import torch.nn.functional as F
