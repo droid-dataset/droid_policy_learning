@@ -5,6 +5,11 @@ This repository contains code for training and evaluating policies on the [DROID
 [**[Homepage]**](https://droid-dataset.github.io) &ensp; [**[Documentation]**](https://droid-dataset.github.io/droid) &ensp; [**[Paper]**](https://arxiv.org/abs/2403.12945) &ensp; [**[Dataset Visualizer]**](https://droid-dataset.github.io/dataset.html).
 
 -------
+## Updates
+
+- [12/21/24]: We provide an updated set of DROID language annotations [on HuggingFace](https://huggingface.co/KarlP/droid) -- 3 natural language annotations for 95% of all successful DROID episodes (75k episodes)
+
+-------
 ## Installation
 Create a python3 conda environment (tested with Python 3.10) and run the following:
 
