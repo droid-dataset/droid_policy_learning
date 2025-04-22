@@ -7,6 +7,7 @@ This repository contains code for training and evaluating policies on the [DROID
 -------
 ## Updates
 
+- [04/22/25]: We provide improved camera calibrations for 36k episodes of the DROID dataset [on HuggingFace](https://huggingface.co/KarlP/droid) -- check our [updated paper](https://arxiv.org/abs/2403.12945) for how we computed these calibration values!
 - [12/21/24]: We provide an updated set of DROID language annotations [on HuggingFace](https://huggingface.co/KarlP/droid) -- 3 natural language annotations for 95% of all successful DROID episodes (75k episodes)
 
 -------
